@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Board {
     private ArrayList<Cell> board;
 
-    Board() {
+    public Board(int column, int line) {
         board = new ArrayList<>();
     }
 }
