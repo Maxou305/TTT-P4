@@ -40,4 +40,10 @@ public class Board {
         return diagonale;
 
     }
+
+    public Object getBoards() {
+    }
+
+    public Object getBoard() {
+    }
 }
