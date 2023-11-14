@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aea0bee-0f31-4150-a84d-37c943caff20" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Puissance4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/TicTacToe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/board/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/board/Cell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/player/BotPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/player/HumanPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/player/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/DisplayBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TicTacToe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +23,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2Y7DyW0yzMLFnTum5bA9Ta2P087" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -53,6 +46,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,7 +64,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699867981693</updated>
-      <workItem from="1699867982776" duration="5606000" />
+      <workItem from="1699867982776" duration="6277000" />
+      <workItem from="1699949094602" duration="1668000" />
     </task>
     <servers />
   </component>
