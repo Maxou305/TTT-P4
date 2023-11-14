@@ -38,5 +38,6 @@ public class Board {
         diagonale.add( board_data.get(1).get(1) );
         diagonale.add( board_data.get(2).get(2) );
         return diagonale;
+
     }
 }
