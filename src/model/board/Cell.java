@@ -1,10 +1,22 @@
 package model.board;
 
 public class Cell {
-    private char Symbole;
+    public int x;
+    public int y;
+    public char Symbole;
 
-    public Cell() {
-        this.Symbole = 'O';
+    @Override
+    public String toString() {
+        return "Cell{" +
+                "Symbole=" + Symbole +
+                '}';
+    }
+
+    public Cell(int x, int y) {
+        this.Symbole = ' ';
+        this.x = x;
+        this.y = y;
+
     }
 
     public char getSymbole() {
@@ -15,3 +27,4 @@ public class Cell {
         Symbole = symbole;
     }
 }
+
