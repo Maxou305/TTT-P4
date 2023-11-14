@@ -64,5 +64,19 @@ public class Board {
         return row >= 0 && row < board_data.size() && col >= 0 && col < board_data.get(0).size();
     }
 
+    public ArrayList<ArrayList<Cell>> getBoard_data() {
+        return board_data;
+    }
 
+    public void setBoard_data(ArrayList<ArrayList<Cell>> board_data) {
+        this.board_data = board_data;
+    }
+
+    public ArrayList<Cell> getBoard() {
+        return board;
+    }
+
+    public void setBoard(ArrayList<Cell> board) {
+        this.board = board;
+    }
 }

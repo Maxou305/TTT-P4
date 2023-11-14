@@ -24,21 +24,19 @@ public class Game {
     public void nextTurn() {
         if (playerTurn == 0) {
             playerTurn++;
-            winCondition = player.winCondition
         } else {
             playerTurn--;
         }
     }
 
-//    public void playGame() {
-//        while (!isOver) {
-//            board.displayBoard();
-//            choseEmptyCase();
-//            markCase();
-//            checkWin();
-//            nextTurn();
-//        }
-//    }
+    public void playGame() {
+        while (!isOver) {
+            board.displayBoard();
+            choseEmptyCase();
+            checkWin();
+            nextTurn();
+        }
+    }
 
     public void boardIsFull() {
     }
@@ -50,10 +48,12 @@ public class Game {
 //        }
 //    }
 
-    public void choseEmptyCase() {
+    public void choseEmptyCase() { // todo faire en sorte de pinger la case (changer Symbole)
         Scanner eventUser = new Scanner(System.in);
         System.out.println("Où veux-tu mettre ton pion ?");
         int userChoice = eventUser.nextInt();
+        // pinger la bonne case
+        markCase();
     }
 
     public void checkWin() {
@@ -63,24 +63,29 @@ public class Game {
     }
 
     public void checkVerticalWin(String winCondition, int x, int y) {
-        if (board.getBoards().getColums(x, y).contains(winCondition)) {
+        if (board.getBoard_data().getColums(x, y).contains(winCondition)) {
             System.out.println("YOU ARE THE WINNER");
             isOver = true;
         }
     }
 
+    public void markCase() {
+        switch (playerTurn){
+            case 0 -> cell; // "X";
+            case 1 -> marl "O";
+        }
+    }
+
     public void checkHorizontalWin(String winCondition, int x, int y) {
-        if (board.getBoards().getLine(x, y).contains(winCondition)) {
+        if (board.getBoard_data().getLine(x, y).contains(winCondition)) {
             System.out.println("YOU ARE THE WINNER");
             isOver = true;
         }
     }
 
     public void checkDiagonalWin(String winCondition, int x, int y) {
-        for (ArrayList<String> diag : board.getBoards().getDiag(x, y) {
-            if (diag.contains(winCondition)) {
-                System.out.println("T'AS GAGNE COOL");
-            }
+        if (board.getAscendingDiagonal(x, y).contains(winCondition) || board.getDescendingDiagonal(x, y).contains(winCondition)) {
+            System.out.println("T'AS GAGNE COOL");
         }
     }
 }
