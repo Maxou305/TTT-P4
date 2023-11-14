@@ -6,7 +6,6 @@ public class Controller {
     Controller() {
 
     }
-
     public void start(){
 
     }
