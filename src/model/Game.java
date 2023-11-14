@@ -24,6 +24,7 @@ public class Game {
     public void nextTurn() {
         if (playerTurn == 0) {
             playerTurn++;
+            winCondition = player.winCondition
         } else {
             playerTurn--;
         }
@@ -76,20 +77,10 @@ public class Game {
     }
 
     public void checkDiagonalWin(String winCondition, int x, int y) {
-        for (int i = 0; i < 3; i++) {
-//            return getBoard().getDiagonal(i).stream().distinct().count() <= 1;
-            if (board.getBoards().getColums(i).contains("XXXX")) {
-                System.out.println("Player X a gagné youhouuu");
-            }
-            if (board.getBoard().getDiagonal(i).contains("OOOO")) {
-                System.out.println("Player O a gagné youpiiiiii");
-                return true;
+        for (ArrayList<String> diag : board.getBoards().getDiag(x, y) {
+            if (diag.contains(winCondition)) {
+                System.out.println("T'AS GAGNE COOL");
             }
         }
-
-        for (ArrayList<String> diag : board.getBoards().getDiag(x,
-                y) {
-
-             }
     }
 }
