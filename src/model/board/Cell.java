@@ -16,6 +16,7 @@ public class Cell {
         this.Symbole = ' ';
         this.x = x;
         this.y = y;
+
     }
 
     public char getSymbole() {
@@ -26,3 +27,4 @@ public class Cell {
         Symbole = symbole;
     }
 }
+

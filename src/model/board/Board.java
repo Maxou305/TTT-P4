@@ -43,11 +43,13 @@ public class Board {
         }
     }
 
+
     public ArrayList<Cell> getDescendingDiagonal(int row, int col) {
         List<Cell> diag = board.stream()
                 .filter(cell -> cell.x - cell.y == row - col)
                 .collect(Collectors.toList());
         return (ArrayList<Cell>) diag ;
+
     }
 
     public ArrayList<Cell> getAscendingDiagonal(int row, int col) {
