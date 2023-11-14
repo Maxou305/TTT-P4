@@ -1,8 +1,10 @@
 package model;
 
 import model.board.Board;
+import model.board.Cell;
 import model.player.Player;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game {
@@ -11,6 +13,8 @@ public class Game {
     private Player player2;
     private int playerTurn;
     private boolean isOver;
+    private String winConditionPlayer1;
+    private String winConditionPlayer2;
 
     public void Game() {
         playerTurn = 0;
@@ -51,5 +55,41 @@ public class Game {
         int userChoice = eventUser.nextInt();
     }
 
+    public void checkWin() {
+        checkVerticalWin();
+        checkHorizontalWin();
+        checkDiagonalWin();
+    }
 
+    public void checkVerticalWin(String winCondition, int x, int y) {
+        if (board.getBoards().getColums(x, y).contains(winCondition)) {
+            System.out.println("YOU ARE THE WINNER");
+            isOver = true;
+        }
+    }
+
+    public void checkHorizontalWin(String winCondition, int x, int y) {
+        if (board.getBoards().getLine(x, y).contains(winCondition)) {
+            System.out.println("YOU ARE THE WINNER");
+            isOver = true;
+        }
+    }
+
+    public void checkDiagonalWin(String winCondition, int x, int y) {
+        for (int i = 0; i < 3; i++) {
+//            return getBoard().getDiagonal(i).stream().distinct().count() <= 1;
+            if (board.getBoards().getColums(i).contains("XXXX")) {
+                System.out.println("Player X a gagné youhouuu");
+            }
+            if (board.getBoard().getDiagonal(i).contains("OOOO")) {
+                System.out.println("Player O a gagné youpiiiiii");
+                return true;
+            }
+        }
+
+        for (ArrayList<String> diag : board.getBoards().getDiag(x,
+                y) {
+
+             }
+    }
 }

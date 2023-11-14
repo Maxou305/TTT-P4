@@ -8,4 +8,10 @@ public class Board {
     public Board(int column, int line) {
         board = new ArrayList<>();
     }
+
+    public Object getBoards() {
+    }
+
+    public Object getBoard() {
+    }
 }
