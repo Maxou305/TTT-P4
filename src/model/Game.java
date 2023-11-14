@@ -25,25 +25,25 @@ public class Game {
         }
     }
 
-    public void playGame() {
-        while (!isOver) {
-            displayBoard();
-            choseEmptyCase();
-            markCase();
-            checkWin();
-            nextTurn();
-        }
-    }
+//    public void playGame() {
+//        while (!isOver) {
+//            board.displayBoard();
+//            choseEmptyCase();
+//            markCase();
+//            checkWin();
+//            nextTurn();
+//        }
+//    }
 
     public void boardIsFull() {
     }
 
-    public void markCase() {
-        switch (playerTurn) {
-            case 0 -> marquerX;
-            case 1 -> marquer0;
-        }
-    }
+//    public void markCase() {
+//        switch (playerTurn) {
+//            case 0 -> marquerX;
+//            case 1 -> marquer0;
+//        }
+//    }
 
     public void choseEmptyCase() {
         Scanner eventUser = new Scanner(System.in);

@@ -14,3 +14,4 @@ public class Cell {
     public void setSymbole(char symbole) {
         Symbole = symbole;
     }
+}

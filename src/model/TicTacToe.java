@@ -22,7 +22,7 @@ public class TicTacToe extends Game {
     public boolean checkVerticalWin() { // todo attention il faut gérer le cas où toutes les cases sont vides !
         for (int i = 0; i < 3; i++) {
 //            return getBoard().getColumn(i).stream().distinct().count() <= 1;
-            if (board.getBoards().getColums(i).contains("XXXX")) {
+            if (board.getBoard().getColums(i).contains("XXXX")) {
                 System.out.println("Player X a gagné youhouuu");
                 return true;
             }
