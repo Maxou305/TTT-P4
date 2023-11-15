@@ -13,8 +13,8 @@ public class Menu { // TODO premières ébauches d'affichage du jeu
     public Player player1;
     public Player player2;
 
-    public Menu(Scanner scanner) {
-        this.scanner = scanner;
+    public Menu() {
+        scanner = new Scanner(System.in);
     }
 
     private void decoMenu() {
@@ -29,8 +29,7 @@ public class Menu { // TODO premières ébauches d'affichage du jeu
     }
 
     public int displayStartMenu() {
-
-
+        decoMenu();
         System.out.println("Quel jeu souhaitez vous lancer ?\n");
         System.out.println("[1] Tic tac Toe");
         System.out.println("[2] Puissance 4");
@@ -39,32 +38,5 @@ public class Menu { // TODO premières ébauches d'affichage du jeu
         return playerChoice;
     }
 
-    public void gameMenu() {
-        decoMenu();
-        boolean isReady = false;
-        Game game = new Game();
-
-        // Tant que isReady est faux
-        while (!isReady) {
-            switch (displayStartMenu()) {
-                case 1 -> {
-                    new TicTacToe();
-                }
-                case 2 -> new Puissance4();
-                case 3 -> {
-                    System.out.println("Oh nooon vous avez quitté le jeu ! A bientôt :) ");
-                    // isReady devient vrai ce qui permet de sortir de la boucle while
-                    isReady = true;
-                }
-//                case 4 -> {
-//
-//                }
-//                case 5 -> {
-//
-//                }
-                default -> System.out.println("Veuillez entrer un choix valide !");
-            }
-        }
-    }
 
 }

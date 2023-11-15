@@ -1,48 +1,37 @@
 package model;
 
 import model.board.Board;
+import model.player.HumanPlayer;
 import model.player.Player;
 
 import java.util.Scanner;
 
 public class Game {
     public Board board;
-    private Player player1;
-    private Player player2;
-    private int playerTurn;
-
+    protected Player player1;
+    protected Player player2;
     private Player currentPlayer;
-
     private boolean isOver;
 
     public void Game() {
-        playerTurn = 0;
         currentPlayer = player1;
         isOver = false;
     }
 
-//    public void nextPlayer(){
-//        if (currentPlayer == player1) {
-//            currentPlayer = player2;
-//        } else {
-//            currentPlayer = player1;
-//        }
-//    }
-
-    public void nextTurn() {
-        if (playerTurn == 0) {
-            playerTurn++;
+    public void nextPlayer() {
+        if (currentPlayer == player1) {
+            currentPlayer = player2;
         } else {
-            playerTurn--;
+            currentPlayer = player1;
         }
     }
 
     public void playGame() {
         while (!isOver) {
-//            board.displayBoard();
+            board.displayBoard();
             choseEmptyCase();
             checkWin();
-            nextTurn();
+            nextPlayer();
         }
     }
 
@@ -55,7 +44,7 @@ public class Game {
         System.out.println("Où veux-tu mettre ton pion ?");
         int userChoice = eventUser.nextInt();
         // pinger la bonne case
-//        markCase(userChoice);
+        markCase(userChoice);
     }
 
     public void checkWin() {
@@ -72,19 +61,10 @@ public class Game {
         }
     }
 
-//    public void markCase(int userChoice) { // todo penser à afficher le numéro de la case
-//
-//        switch (playerTurn) {
-//            case 0 -> board.setSymboleToCurrentCell(, 'X');
-//            case 1 -> board.setSymboleToCurrentCell(userChoice, 'O');
-//        }
-//    }
-//
-//
-//    public void markCase(int userChoice) { // todo penser à afficher le numéro de la case
-//        board.setSymboleToCurrentCell(, currentPlayer.getSymbole() );
-//
-//    }
+
+    public void markCase(int userChoice) { // todo penser à afficher le numéro de la case
+        board.setSymboleToCurrentCell(userChoice, currentPlayer.getSymbole());
+    }
 
     public void checkHorizontalWin(String winCondition, int x, int y) {
         if (board.getLine(x, y).contains(winCondition)) {

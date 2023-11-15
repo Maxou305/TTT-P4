@@ -7,10 +7,10 @@ public abstract class Player { //TODO retravailler la classe Player (ébauche)
     private String name;
     private String winCondition;
 
-    public Player(char symbole, String name) {
+    public Player(char symbole, String name, String winCondition) {
         this.symbole = symbole;
         this.name = name;
-//        this.winCondition = winCondition;
+        this.winCondition = winCondition;
     }
 
     public int[] makeMove() {

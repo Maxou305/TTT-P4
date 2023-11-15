@@ -7,9 +7,14 @@ import java.util.stream.Collectors;
 
 public class Board {
     private ArrayList<Cell> data;
+    private int rows;
 
-    public Board(int rows, int columns) {
-        initBoardManip(rows, columns);
+    private int col;
+
+    public Board(int rows, int col) {
+        this.rows = rows;
+        this.col = col;
+        initBoardManip(rows, col);
     }
 
     public void initBoardManip(int rows, int columns) {
@@ -21,10 +26,10 @@ public class Board {
         }
     }
 
-    public void displayBoard(int rows, int columns) { // voir comment enlever les paramètres
+    public void displayBoard() { // voir comment enlever les paramètres
         for (int i = 0; i < rows; i++) {
             System.out.print(" | ");
-            for (int j = 0; j < columns; j++) {
+            for (int j = 0; j < col; j++) {
                 System.out.print(data.get(i).getSymbole() + " | ");
             }
             System.out.println();
