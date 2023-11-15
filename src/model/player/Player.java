@@ -6,7 +6,7 @@ public abstract class Player { //TODO retravailler la classe Player (ébauche)
     private char symbole;
     private String name;
 
-    public Player(char symbole, String name) {
+    private Player(char symbole, String name) {
         this.symbole = symbole;
         this.name = name;
     }

@@ -64,6 +64,61 @@ public class Board {
         return row >= 0 && row < board_data.size() && col >= 0 && col < board_data.get(0).size();
     }
 
+    public void updateBoard(int position, int player, char[][] gameBoard) {
+
+        char symbole;
+
+        if (player == 1) {
+            symbole = 'X';
+        } else {
+            symbole = 'O';
+        }
+
+        switch (position) {
+
+            case 1:
+                gameBoard[0][0] = symbole;
+                displayBoard();
+                break;
+            case 2:
+                gameBoard[0][1] = symbole;
+                displayBoard();
+                break;
+            case 3:
+                gameBoard[0][2] = symbole;
+                displayBoard();
+                break;
+            case 4:
+                gameBoard[1][0] = symbole;
+                displayBoard();
+                break;
+            case 5:
+                gameBoard[1][1] = symbole;
+                displayBoard();
+                break;
+            case 6:
+                gameBoard[1][2] = symbole;
+               displayBoard();
+                break;
+            case 7:
+                gameBoard[2][0] = symbole;
+                displayBoard();
+                break;
+            case 8:
+                gameBoard[2][1] = symbole;
+                displayBoard();
+                break;
+            case 9:
+                gameBoard[2][2] = symbole;
+                displayBoard();
+                break;
+
+            default:
+                break;
+        }
+    }
+
+
     public ArrayList<ArrayList<Cell>> getBoard_data() {
         return board_data;
     }
