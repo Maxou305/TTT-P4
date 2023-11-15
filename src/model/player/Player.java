@@ -5,10 +5,12 @@ import java.util.Scanner;
 public abstract class Player { //TODO retravailler la classe Player (ébauche)
     private char symbole;
     private String name;
+    private String winCondition;
 
     public Player(char symbole, String name) {
         this.symbole = symbole;
         this.name = name;
+//        this.winCondition = winCondition;
     }
 
     public int[] makeMove() {

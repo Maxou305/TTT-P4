@@ -1,16 +1,11 @@
 package model.board;
 
+import model.player.Player;
+
 public class Cell {
     public int x;
     public int y;
     public char Symbole;
-
-    @Override
-    public String toString() {
-        return "Cell{" +
-                "Symbole=" + Symbole +
-                '}';
-    }
 
     public Cell(int x, int y) {
         this.Symbole = ' ';
@@ -25,6 +20,13 @@ public class Cell {
 
     public void setSymbole(char symbole) {
         Symbole = symbole;
+    }
+
+    @Override
+    public String toString() {
+        return "Cell{" +
+                "Symbole=" + Symbole +
+                '}';
     }
 }
 

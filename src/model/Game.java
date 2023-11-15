@@ -1,25 +1,33 @@
 package model;
 
 import model.board.Board;
-import model.board.Cell;
 import model.player.Player;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game {
-    private Board board;
+    public Board board;
     private Player player1;
     private Player player2;
     private int playerTurn;
+
+    private Player currentPlayer;
+
     private boolean isOver;
-    private String winConditionPlayer1;
-    private String winConditionPlayer2;
 
     public void Game() {
         playerTurn = 0;
+        currentPlayer = player1;
         isOver = false;
     }
+
+//    public void nextPlayer(){
+//        if (currentPlayer == player1) {
+//            currentPlayer = player2;
+//        } else {
+//            currentPlayer = player1;
+//        }
+//    }
 
     public void nextTurn() {
         if (playerTurn == 0) {
@@ -31,7 +39,7 @@ public class Game {
 
     public void playGame() {
         while (!isOver) {
-            board.displayBoard();
+//            board.displayBoard();
             choseEmptyCase();
             checkWin();
             nextTurn();
@@ -41,43 +49,45 @@ public class Game {
     public void boardIsFull() {
     }
 
-//    public void markCase() {
-//        switch (playerTurn) {
-//            case 0 -> marquerX;
-//            case 1 -> marquer0;
-//        }
-//    }
 
-    public void choseEmptyCase() { // todo faire en sorte de pinger la case (changer Symbole)
+    public void choseEmptyCase() { // todo déplacer dans TTT et P4 et préciser le comportmenet
         Scanner eventUser = new Scanner(System.in);
         System.out.println("Où veux-tu mettre ton pion ?");
         int userChoice = eventUser.nextInt();
         // pinger la bonne case
-        markCase();
+//        markCase(userChoice);
     }
 
     public void checkWin() {
-        checkVerticalWin();
-        checkHorizontalWin();
-        checkDiagonalWin();
+
+//        checkVerticalWin();
+//        checkHorizontalWin();
+//        checkDiagonalWin();
     }
 
     public void checkVerticalWin(String winCondition, int x, int y) {
-        if (board.getBoard_data().getColums(x, y).contains(winCondition)) {
+        if (board.getColumn(x, y).contains(winCondition)) {
             System.out.println("YOU ARE THE WINNER");
             isOver = true;
         }
     }
 
-    public void markCase() {
-        switch (playerTurn){
-            case 0 -> cell; // "X";
-            case 1 -> marl "O";
-        }
-    }
+//    public void markCase(int userChoice) { // todo penser à afficher le numéro de la case
+//
+//        switch (playerTurn) {
+//            case 0 -> board.setSymboleToCurrentCell(, 'X');
+//            case 1 -> board.setSymboleToCurrentCell(userChoice, 'O');
+//        }
+//    }
+//
+//
+//    public void markCase(int userChoice) { // todo penser à afficher le numéro de la case
+//        board.setSymboleToCurrentCell(, currentPlayer.getSymbole() );
+//
+//    }
 
     public void checkHorizontalWin(String winCondition, int x, int y) {
-        if (board.getBoard_data().getLine(x, y).contains(winCondition)) {
+        if (board.getLine(x, y).contains(winCondition)) {
             System.out.println("YOU ARE THE WINNER");
             isOver = true;
         }
