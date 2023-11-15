@@ -36,7 +36,6 @@ public class TicTacToe extends Game {
 
 }
 
-
     public void printBoard(char [][] gameBoard){
 
         for(char[] row : gameBoard){
